@@ -86,7 +86,7 @@ func main() {
 					performDnsQuery(client, stmt, ip, additionalDomain)
 				}
 			}
-		}(append(ip[:0:0], ip...))
+		}(append(ip[:0:0], ip...)) //appends all elements of the original ip slice to the zero-length slice created by ip[:0:0]
 	}
 
 	wg.Wait()
